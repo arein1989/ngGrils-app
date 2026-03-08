@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { InputButtonUnitComponent } from './input-button-unit/input-button-unit.component';
 import { TodoItemComponent } from './todo-item/todo-item.component';
+import { TodoItem } from './interfaces/todo-item';
 @Component({
   selector: 'app-root',
   standalone: true,
@@ -22,7 +23,7 @@ import { TodoItemComponent } from './todo-item/todo-item.component';
 })
 export class AppComponent {
   title = 'todo-list';
-  todoList = [
+  todoList: TodoItem[]  = [
     {title: 'install NodeJS'},
     {title: 'install Angular CLI'},
     {title: 'create new app'},
