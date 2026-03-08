@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-input-button-unit',
@@ -8,9 +8,9 @@ import { Component, OnInit } from '@angular/core';
   template: `
   <input #inputElementRef
          [value]="title"
-         (keyup.enter)="changeTitle(getInputValue($event))">
+         (keyup.enter)="submitValue(getInputValue($event))">
 
-  <button (click)="changeTitle(inputElementRef.value)">
+  <button (click)="submitValue(inputElementRef.value)">
     Save
   </button>
 `,
@@ -26,11 +26,14 @@ export class InputButtonUnitComponent implements OnInit {
   }
 
   changeTitle(newTitle: string): void {
-    this.title = newTitle;
-  }
+  this.submit.emit(newTitle);
+}
 
-
+submitValue(newTitle: string) {
+  this.submit.emit(newTitle);
+}
   getInputValue(event: Event) {
     return (event.target as HTMLInputElement).value;
   }
+  @Output() submit: EventEmitter<string> = new EventEmitter<string>();
 }
