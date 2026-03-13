@@ -6,11 +6,11 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
   standalone: true,
   imports: [CommonModule],
   template: `
-  <input #inputElementRef
+  <input class="todo-input" #inputElementRef
          [value]="title"
          (keyup.enter)="submitValue(getInputValue($event))">
 
-  <button (click)="submitValue(inputElementRef.value)">
+  <button class="btn" (click)="submitValue(inputElementRef.value)">
     Save
   </button>
 `,

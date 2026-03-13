@@ -6,7 +6,9 @@ import { TodoItem } from '../interfaces/todo-item';
   standalone: true,
   imports: [CommonModule],
   template: `
-    {{ item.title }}
+    <div class="todo-item">
+      {{ item.title }}
+    </div>
   `,
   styleUrls: ['./todo-item.component.css']
 })
