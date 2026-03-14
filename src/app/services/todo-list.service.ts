@@ -13,7 +13,9 @@ const defaultTodoList = [
   {title: 'deploy app'},
 ];
 
-@Injectable()
+@Injectable({
+  providedIn: 'root'
+})
 export class TodoListService {
   todoList: TodoItem[];
 
