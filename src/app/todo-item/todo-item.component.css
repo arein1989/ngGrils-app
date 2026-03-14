@@ -1,6 +1,7 @@
 .todo-item {
   padding: 10px 0;
   border-top: solid 1px #ddd;
+  box-shadow: #ddd 0px 1px 0px 0px inset;
   min-height: 30px;
   line-height: 30px;
   display: flex;

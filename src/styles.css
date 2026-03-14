@@ -3,12 +3,13 @@ html, body, div, span,
 h1, p, ul, li {
   padding: 0;
   border: 0;
-  font: inherit;
+  font: loral, sans-serif;
   vertical-align: baseline;
 }
 
 body {
   background: #f1f1f1;
+  margin: 10% 20%;
   font-size: 16px;
   line-height: 22px;
   color: #404040;
@@ -22,7 +23,7 @@ ol, ul {
 .btn {
   background: lightseagreen;
   color: #fff;
-  padding: 3px 10px;
+  padding: 6px 25px;
   margin: 0 0 0 3px;
   border: none;
   border-radius: 5px;
