@@ -8,7 +8,9 @@ h1, p, ul, li {
 }
 
 body {
-  background: #f1f1f1;
+  background-image: url('/assets/images-2.jpg');
+  background-size: cover;
+  background-position: center;
   margin: 10% 20%;
   font-size: 16px;
   line-height: 22px;
